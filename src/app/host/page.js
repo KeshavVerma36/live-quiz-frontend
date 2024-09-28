@@ -6,7 +6,7 @@ const Host = ({ onStartQuiz }) => {
   const [ws, setWs] = useState(null);
 
   useEffect(() => {
-    const webSocket = new WebSocket('ws://localhost:3001');
+    const webSocket = new WebSocket('wss://live-quiz-backend.onrender.com');
     setWs(webSocket);
 
     webSocket.onmessage = (event) => {
